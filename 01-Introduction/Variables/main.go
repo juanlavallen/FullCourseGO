@@ -18,4 +18,7 @@ func main() {
 	var d bool    // false
 
 	fmt.Println(a, b, c, d)
+
+	const pi = 3.141592
+	fmt.Println(pi)
 }
