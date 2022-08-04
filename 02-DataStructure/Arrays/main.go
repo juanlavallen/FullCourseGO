@@ -14,4 +14,7 @@ func main() {
 
 	fmt.Println(notes)
 	fmt.Println(notes[3])
+
+	characters := [3]string{"Homero", "Marge", "Bart"}
+	fmt.Println(characters)
 }
