@@ -20,4 +20,13 @@ func main() {
 
 	colors := [...]string{"Red", "Black", "Green", "Orange"}
 	fmt.Println(colors, len(colors))
+
+	languages := [...]string{0: "JS", 1: "GO", 2: "Python", 3: "Rust"}
+	fmt.Println(languages)
+
+	start := languages[0:2] // => [JS GO] || [:2] = [0:2]
+	fmt.Println(start, len(start))
+
+	end := languages[3:] // => [Rust]
+	fmt.Println(end, len(end))
 }
