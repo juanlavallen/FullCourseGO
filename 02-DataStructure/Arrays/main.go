@@ -17,4 +17,7 @@ func main() {
 
 	characters := [3]string{"Homero", "Marge", "Bart"}
 	fmt.Println(characters)
+
+	colors := [...]string{"Red", "Black", "Green", "Orange"}
+	fmt.Println(colors, len(colors))
 }
