@@ -8,4 +8,21 @@ func main() {
 
 	numbers = append(numbers, 4)
 	fmt.Println(numbers, len(numbers))
+
+	calendar := []string{
+		"January",
+		"February",
+		"March",
+		"April",
+		"May",
+		"June",
+		"July",
+		"August",
+		"September",
+		"Octuber",
+		"November",
+		"December",
+	}
+
+	fmt.Printf("Len: %v, Cap: %v, %p \n", len(calendar), cap(calendar), calendar)
 }
