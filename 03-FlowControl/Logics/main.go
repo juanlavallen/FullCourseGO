@@ -14,4 +14,9 @@ func main() {
 	// OR
 	fmt.Println(true || true)  // => true
 	fmt.Println(true || false) // => true
+
+	number := 2
+	result := number == 2 && 4 > number
+
+	fmt.Println(result)
 }
