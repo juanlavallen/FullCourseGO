@@ -19,4 +19,13 @@ func main() {
 
 	delete(characters, 5)
 	fmt.Println(characters)
+
+	students := make(map[string][]int)
+
+	students["Paul"] = []int{7, 9, 10}
+	students["Bill"] = []int{10, 9, 10}
+
+	fmt.Println(students)
+	fmt.Println(students["Paul"])
+	fmt.Println(students["Paul"][2])
 }
