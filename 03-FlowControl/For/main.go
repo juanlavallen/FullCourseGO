@@ -10,4 +10,17 @@ func main() {
 			fmt.Println(i)
 		}
 	}
+
+	// Break and Continue
+
+	for i := 0; i <= 10; i++ {
+		if i == 5 {
+			continue
+		}
+
+		if i == 8 {
+			break
+		}
+		fmt.Println(i)
+	}
 }
