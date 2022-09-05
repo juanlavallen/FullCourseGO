@@ -17,6 +17,11 @@ func (p *Person) edit(name string) {
 	p.name = name
 }
 
+// Inheritance
+type Employe struct {
+	Person
+}
+
 func main() {
 	// Instance
 	// person := Person{"Paul", 34}
