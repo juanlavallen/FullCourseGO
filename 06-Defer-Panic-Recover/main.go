@@ -8,7 +8,7 @@ import (
 func main() {
 
 	if file, error := os.Open("hello.txt"); error != nil {
-		fmt.Println("File not found")
+		panic("File not found")
 	} else {
 
 		defer func() {
