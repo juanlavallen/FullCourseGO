@@ -7,6 +7,12 @@ import (
 
 func main() {
 
+	defer func() {
+		if error := recover(); error != nil {
+			fmt.Println("An error occurs")
+		}
+	}()
+
 	if file, error := os.Open("hello.txt"); error != nil {
 		panic("File not found")
 	} else {
