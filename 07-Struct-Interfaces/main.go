@@ -13,6 +13,10 @@ func (p *Person) imprimer() {
 	fmt.Printf("Name: %s\nAge: %d\n", p.name, p.age)
 }
 
+func (p *Person) edit(name string) {
+	p.name = name
+}
+
 func main() {
 	// Instance
 	// person := Person{"Paul", 34}
@@ -20,5 +24,9 @@ func main() {
 	fmt.Println(person)
 
 	// Call Method
+	person.imprimer()
+
+	// Change method name
+	person.edit("Bill")
 	person.imprimer()
 }
