@@ -8,9 +8,17 @@ type Person struct {
 	age  int
 }
 
+// Method
+func (p *Person) imprimer() {
+	fmt.Printf("Name: %s\nAge: %d\n", p.name, p.age)
+}
+
 func main() {
 	// Instance
 	// person := Person{"Paul", 34}
 	person := Person{name: "Paul", age: 34}
 	fmt.Println(person)
+
+	// Call Method
+	person.imprimer()
 }
