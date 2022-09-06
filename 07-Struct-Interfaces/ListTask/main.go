@@ -6,11 +6,12 @@ type TaskList struct {
 	tasks []*Task
 }
 
-func (tl *TaskList) appendTask(task *Task) {
+func (tl *TaskList) AppendTask(task *Task) {
 	tl.tasks = append(tl.tasks, task)
 }
 
-func (tl *Task) remove(task *Task) {
+func (tl *TaskList) RemoveTask(index int) {
+	tl.tasks = append(tl.tasks[:index], tl.tasks[index+1:]...)
 }
 
 type Task struct {
@@ -19,11 +20,11 @@ type Task struct {
 	completed   bool
 }
 
-func (t *Task) toPrint() {
+func (t *Task) ToPrint() {
 	fmt.Printf("Nombre: %s \nDescripcion: %s \nCompletado: %t\n", t.name, t.description, t.completed)
 }
 
-func (t *Task) markCompleted() {
+func (t *Task) MarkCompleted() {
 	t.completed = true
 }
 
@@ -40,6 +41,6 @@ func main() {
 		completed:   false,
 	}
 
-	firstTask.toPrint()
-	secondTask.toPrint()
+	firstTask.ToPrint()
+	secondTask.ToPrint()
 }
