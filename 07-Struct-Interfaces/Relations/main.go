@@ -58,4 +58,8 @@ func main() {
 	}
 
 	fmt.Println(course)
+
+	for _, video := range course.videos {
+		fmt.Println(video.title)
+	}
 }
