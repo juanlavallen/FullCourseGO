@@ -41,6 +41,15 @@ func main() {
 		completed:   false,
 	}
 
+	list := TaskList{}
+
+	list.AppendTask(&firstTask)
+	list.AppendTask(&secondTask)
+
+	for index, task := range list.tasks {
+		fmt.Println(index, task)
+	}
+
 	firstTask.ToPrint()
 	secondTask.ToPrint()
 }
