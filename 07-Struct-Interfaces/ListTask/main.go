@@ -2,6 +2,17 @@ package main
 
 import "fmt"
 
+type TaskList struct {
+	tasks []*Task
+}
+
+func (tl *TaskList) appendTask(task *Task) {
+	tl.tasks = append(tl.tasks, task)
+}
+
+func (tl *Task) remove(task *Task) {
+}
+
 type Task struct {
 	name        string
 	description string
@@ -17,5 +28,18 @@ func (t *Task) markCompleted() {
 }
 
 func main() {
+	firstTask := Task{
+		name:        "Curso de GO",
+		description: "Backend con GO",
+		completed:   true,
+	}
 
+	secondTask := Task{
+		name:        "Curso de Rust",
+		description: "Backend con Rust",
+		completed:   false,
+	}
+
+	firstTask.toPrint()
+	secondTask.toPrint()
 }
