@@ -1,7 +1,15 @@
 package main
 
-import "fullcourse/messages"
+import (
+	"fmt"
+	"fullcourse/messages"
+	"fullcourse/models"
+)
 
 func main() {
 	messages.Send()
+
+	person := models.Person{}
+	person.Constructor("Juan", 20)
+	fmt.Println(person)
 }
