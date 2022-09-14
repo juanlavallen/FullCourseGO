@@ -11,3 +11,13 @@ func (p *Person) Constructor(name string, age int) {
 	p.name = name
 	p.age = age
 }
+
+// GET
+func (p *Person) GetName() string {
+	return p.name
+}
+
+// SET
+func (p *Person) SetName(name string) {
+	p.name = name
+}

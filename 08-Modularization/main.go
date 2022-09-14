@@ -12,4 +12,7 @@ func main() {
 	person := models.Person{}
 	person.Constructor("Juan", 20)
 	fmt.Println(person)
+
+	person.SetName("Lionel")
+	fmt.Println(person.GetName())
 }
